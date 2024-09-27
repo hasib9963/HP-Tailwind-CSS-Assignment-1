@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    body{
+        @apply font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    section{
+        @apply margin-bottom: 5rem;
+    }
+
+    .tag{
+        @apply bg-white dark:bg-transparent dark:text-white text-black text-lg md:text-sm px-3 py-2 mx-5 rounded-3xl ring-1 ring-[#F44335] transition-all cursor-pointer;
+    }
+  .ctag {
+    @apply bg-white dark:bg-transparent text-black dark:text-white text-lg md:text-sm uppercase px-8 py-2 mx-4 rounded-3xl ring-1 ring-black dark:ring-white transition-all cursor-pointer;
+  }
+  .ctag-1 {
+    @apply bg-green-400 text-black text-lg md:text-sm uppercase px-8 py-2 mx-4 rounded-3xl ring-1 ring-black transition-all cursor-pointer dark:text-white dark:bg-green-400 dark:ring-white;
+  }
+  .container {
+    @apply display: flex align-items: center;
+  }
+  .border-divider {
+    @apply border-right: 1px solid #e5e7eb; /* Light grey border color for vertical lines */
+  }
+  .container .border-divider:last-child {
+    @apply border-right: none; /* No border on the last item */
+  }
+
+  /* Responsive for medium and small devices */
+  @media (max-width: 1023px) {
+    .container {
+      @apply flex-direction: column gap: 10px text-align: center;
+    }
+    .border-divider {
+      @apply border-right: none border-bottom: 1px solid #e5e7eb padding-bottom: 15px;
+    }
+    .container .border-divider:last-child {
+      @apply border-bottom: none; /* No border on the last item */
+    }
+  }
+}
